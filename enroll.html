@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Now - LearnFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration:none; color:inherit;">
+                <i class="fa-solid fa-graduation-cap"></i> LearnFlow
+            </a>
+        </div>
+        <div class="nav-actions">
+            <a href="index.html" class="nav-link">Home</a>
+        </div>
+    </nav>
+
+    <section class="page-container">
+        <h1>Complete Your <span class="highlight-purple">Enrollment</span></h1>
+        
+        <div class="checkout-grid">
+            <div class="summary-card">
+                <h3>Order Summary</h3>
+                <div class="course-preview">
+                    <div class="preview-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div>
+                        <p class="text-sm">Course Name:</p>
+                        <h4 id="courseNameDisplay">Loading...</h4>
+                    </div>
+                </div>
+                <div class="price-row">
+                    <span>Original Price</span>
+                    <span style="text-decoration: line-through; color: #999;">₹2,999</span>
+                </div>
+                <div class="price-row total">
+                    <span>You Pay</span>
+                    <span class="highlight-purple">₹699</span>
+                </div>
+                <p class="refund-note"><i class="fa-solid fa-check-circle"></i> 100% Refundable on completion</p>
+            </div>
+
+            <div class="form-container" style="margin-top: 0;">
+                <form onsubmit="event.preventDefault(); alert('Payment Gateway would open here!');">
+                    <h3>Student Details</h3>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+91 9876543210" required>
+                    </div>
+                    <button type="submit" class="btn-primary full-width" onclick="window.open('https://payments.cashfree.com/links?code=H9me2mjsllo0_AAAAAAAP2ek', '_blank')">Proceed to Pay ₹699</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="copyright">© 2024 LearnFlow. All rights reserved.</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get URL parameters (e.g., ?course=Python)
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseName = urlParams.get('course');
+
+            // Display the course name
+            const displayElement = document.getElementById('courseNameDisplay');
+            if (courseName) {
+                displayElement.innerText = courseName;
+            } else {
+                displayElement.innerText = "Select a Course";
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Lab | LearnFlow - IIT Delhi Alumni Initiative</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz-style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i> LearnFlow
+        </div>
+        <div class="nav-actions">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+            <span class="badge">Practice Mode</span>
+        </div>
+    </nav>
+
+    <main class="quiz-wrapper">
+        <header class="quiz-stats-bar">
+            <div class="stat-item">
+                <i class="fa-solid fa-fire-flame-curved" style="color: #ff4757;"></i>
+                <span id="streak-count">0 Day Streak</span>
+            </div>
+            <div class="stat-item">
+                <i class="fa-solid fa-bullseye" style="color: #6c63ff;"></i>
+                <span id="total-points">0 XP Earned</span>
+            </div>
+        </header>
+
+        <div id="setup-screen" class="screen-container">
+            <div class="loader-content">
+                <div class="spinner"></div>
+                <h2>Preparing Your Practice Session...</h2>
+                <p>Generating questions based on expert curriculum.</p>
+            </div>
+        </div>
+
+        <section id="quiz-screen" class="screen-container hidden">
+            <div class="quiz-card">
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span id="course-tag" class="badge-purple">Topic</span>
+                        <span id="progress-text">Question 1/10</span>
+                    </div>
+                    <div class="progress-bar-outer">
+                        <div id="progress-bar-inner" class="progress-bar-fill" style="width: 10%;"></div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-header">
+                        <span class="q-icon"><i class="fa-solid fa-lightbulb"></i></span>
+                        <h2 id="question-text">Loading question...</h2>
+                    </div>
+
+                    <div id="options-container" class="options-grid">
+                        </div>
+                </div>
+
+                <div class="quiz-footer">
+                    <div class="timer">
+                        <i class="fa-regular fa-clock"></i> <span id="time-left">15</span>s
+                    </div>
+                    <button id="hint-btn" class="btn-outline-small">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Use Hint
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-screen" class="screen-container hidden">
+            <div class="result-card">
+                <div class="trophy-wrapper">
+                    <div class="confetti-placeholder"></div>
+                    <i class="fa-solid fa-award award-icon"></i>
+                </div>
+                
+                <h2>Assessment Complete!</h2>
+                <div class="score-display">
+                    <span id="final-score-val">0</span>
+                    <small>out of</small>
+                    <span id="total-questions-val">0</span>
+                </div>
+
+                <div class="performance-analysis">
+                    <div class="analysis-item">
+                        <span class="label">Accuracy</span>
+                        <span id="accuracy-val" class="value">0%</span>
+                    </div>
+                    <div class="analysis-item">
+                        <span class="label">Avg. Speed</span>
+                        <span id="speed-val" class="value">0s</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button onclick="location.reload()" class="btn-primary">
+                        <i class="fa-solid fa-rotate-right"></i> Play Again
+                    </button>
+                    <a href="index.html" class="btn-secondary">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Courses
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <aside class="leaderboard-section">
+            <h3><i class="fa-solid fa-ranking-star"></i> Today's Top Learners</h3>
+            <ul class="leaderboard-list">
+                <li class="user-rank">
+                    <span class="rank">#1</span>
+                    <span class="name">Aman Sharma</span>
+                    <span class="points">2450 XP</span>
+                </li>
+                <li class="user-rank">
+                    <span class="rank">#2</span>
+                    <span class="name">Priya V.</span>
+                    <span class="points">2100 XP</span>
+                </li>
+                <li class="user-rank">
+                    <span class="rank">#3</span>
+                    <span class="name">Rahul K.</span>
+                    <span class="points">1850 XP</span>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="quiz-footer-info">
+        <p>&copy; 2024 LearnFlow. Designed by IIT Alumni. Professional Skill Assessment.</p>
+    </footer>
+
+    <script src="js/courses_data.js"></script>
+    <script src="js/quiz-logic.js"></script>
+
+</body>
+</html>
