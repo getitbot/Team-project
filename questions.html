@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnFlow | Question Bank</title>
+    <style>
+        :root { --primary: #007bff; --bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #333; text-align: center; }
+        .controls { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+        select, input { flex: 1; padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 16px; min-width: 200px; }
+        select:focus { border-color: var(--primary); outline: none; }
+        .question-card { background: #fff; border-left: 5px solid var(--primary); padding: 15px; margin-bottom: 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: transform 0.2s; }
+        .question-card:hover { transform: translateX(5px); }
+        .q-number { font-weight: bold; color: var(--primary); margin-right: 10px; }
+        .empty-state { text-align: center; color: #888; padding: 40px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📚 Important Question Bank</h1>
+    
+    <div class="controls">
+        <select id="subjectSelect">
+            <option value="">-- Select Subject Category --</option>
+            </select>
+    </div>
+
+    <div id="questionsDisplay">
+        <div class="empty-state">Please select a subject to view questions.</div>
+    </div>
+</div>
+
+<script src="data.js"></script>
+<script>
+    const subjectSelect = document.getElementById('subjectSelect');
+    const display = document.getElementById('questionsDisplay');
+
+    // 1. Populate Dropdown
+    Object.keys(questionData).forEach(subject => {
+        let option = document.createElement('option');
+        option.value = subject;
+        option.innerText = subject;
+        subjectSelect.appendChild(option);
+    });
+
+    // 2. Handle Selection
+    subjectSelect.addEventListener('change', (e) => {
+        const selected = e.target.value;
+        if (!selected) {
+            display.innerHTML = '<div class="empty-state">Please select a subject...</div>';
+            return;
+        }
+
+        const questions = questionData[selected];
+        display.innerHTML = `<h3>Showing 20 Questions for ${selected}</h3>`;
+        
+        questions.forEach((q, index) => {
+            const card = document.createElement('div');
+            card.className = 'question-card';
+            card.innerHTML = `<span class="q-number">Q${index + 1}.</span> ${q}`;
+            display.appendChild(card);
+        });
+    });
+</script>
+</body>
+</html>

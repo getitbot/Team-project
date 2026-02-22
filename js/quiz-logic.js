@@ -1,6 +1,4 @@
-/* ==========================================
-   LEARNFLOW QUIZ ENGINE - CORE LOGIC
-   ========================================== */
+
 
 let currentPool = [];
 let currentIndex = 0;
