@@ -1,9 +1,4 @@
-/* ==========================================================================
-   QUIZ PRACTICE LAB - PREMIUM STYLESHEET
-   Description: Advanced UI for LearnFlow Quiz System
-   ========================================================================== */
 
-/* 1. Variable Definitions & Root Setup */
 :root {
     --primary-purple: #6c63ff;
     --secondary-purple: #574dfa;
@@ -18,7 +13,6 @@
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 2. Global Resets for Quiz Page */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +28,6 @@ body {
     min-height: 100vh;
 }
 
-/* 3. Layout Wrapper */
 .quiz-wrapper {
     max-width: 1200px;
     margin: 40px auto;
@@ -44,7 +37,6 @@ body {
     gap: 30px;
 }
 
-/* 4. Top Stats Bar */
 .quiz-stats-bar {
     grid-column: 1 / -1;
     display: flex;
@@ -65,7 +57,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* 5. Main Card Logic */
 .screen-container {
     background: var(--glass-bg);
     border-radius: 24px;
@@ -82,7 +73,6 @@ body {
     display: none !important;
 }
 
-/* 6. Loader Styles */
 .loader-content {
     flex: 1;
     display: flex;
@@ -107,7 +97,6 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-/* 7. Progress Visualization */
 .progress-container {
     margin-bottom: 30px;
 }
@@ -143,7 +132,6 @@ body {
     transition: width 0.5s ease-in-out;
 }
 
-/* 8. Question Typography */
 .question-header {
     display: flex;
     gap: 15px;
@@ -161,7 +149,6 @@ body {
     color: #1e293b;
 }
 
-/* 9. Answer Grid & Buttons */
 .options-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -203,7 +190,6 @@ body {
     animation: shake 0.4s;
 }
 
-/* 10. Quiz Footer & Timer */
 .quiz-footer {
     margin-top: auto;
     display: flex;
@@ -227,7 +213,6 @@ body {
     transition: 0.3s;
 }
 
-/* 11. Results Display */
 .result-card {
     text-align: center;
 }
@@ -276,7 +261,6 @@ body {
     font-weight: 700;
 }
 
-/* 12. Leaderboard Sidebar */
 .leaderboard-section {
     background: var(--glass-bg);
     border-radius: 24px;
@@ -318,7 +302,6 @@ body {
     font-size: 0.85rem;
 }
 
-/* 13. Animations */
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
@@ -337,7 +320,6 @@ body {
     60% {transform: translateY(-10px);}
 }
 
-/* 14. Responsive Design */
 @media (max-width: 992px) {
     .quiz-wrapper {
         grid-template-columns: 1fr;
