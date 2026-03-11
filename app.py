@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 import pandas as pd
 
 app = Flask(__name__)
-app.secret_key = "learnflow_123"
+app.secret_key = "Shadowscript_123"
 EXCEL_FILE = "submissions.xlsx"
 
 def save_to_excel(student_id, name, link):

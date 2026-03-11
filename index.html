@@ -1,135 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnFlow: Online Tech Courses</title>
+    <title>SkillForge: Online Tech Courses</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="top-banner">
-        Enjoy 100% Refund On Course Completion
+        ⚡ Enjoy 100% Refund On Course Completion &nbsp;|&nbsp; IIT Delhi Alumni Initiative
     </div>
 
     <nav class="navbar">
         <div class="logo">
-            <i class="fa-solid fa-graduation-cap"></i> LearnFlow
+            <i class="fa-solid fa-bolt"></i>
+            Skill<span>Forge</span>
         </div>
         <div class="nav-actions">
-            <span class="badge">An IIT Delhi Alumni Initiative</span>
+            <span class="badge">IIT Delhi Alumni Initiative</span>
             <button class="btn-login" onclick="openModal('Login')">Login</button>
-            <button class="btn-signup" onclick="openModal('Signup')">Signup</button>
-                <a href="quiz.html" class="btn-primary">Practice Quiz Now</a>
-            <a class="btn-primary" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdyrmrb1KovaaSyZ3JU0wVNiJL7wiGj6OoRWUshf29xuIxZcw/viewform?usp=preview'">project submit</a>    
+            <button class="btn-signup" onclick="openModal('Signup')">Get Started</button>
         </div>
     </nav>
+
     <header class="hero-section">
         <div class="hero-content">
-            <p class="sub-text">An <span class="highlight-purple">IIT Delhi</span> Alumni Initiative</p>
-            <h1>Level Up <i class="fa-solid fa-arrow-trend-up"></i> Your Career With Expert Mentorship & Internships For <span class="highlight-bg">FREE</span></h1>
-            <p>With 100% Refund guarantee on course completion.</p>
+            <div class="hero-badge">
+                <i class="fa-solid fa-star"></i>
+                Trusted by 100,000+ Students Across India
+            </div>
+            <h1>
+                Forge Your Future With<br>
+                <span class="highlight-cyan">Expert-Led Tech</span> Courses
+            </h1>
+            <p>Learn from IIT Delhi Alumni. Complete the course. Get a <strong style="color:#00d4ff;">100%
+                    refund</strong> — yes, learn for FREE.</p>
             <div class="rating">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" width="60">
-                <span>4.9/5 ⭐⭐⭐⭐⭐ Google Ratings</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"
+                    width="54">
+                <span>4.9 / 5 &nbsp;⭐⭐⭐⭐⭐&nbsp; Google Ratings</span>
             </div>
             <div class="hero-buttons">
-                <button class="btn-primary" onclick="scrollToSection('courses')">Explore Courses</button>
-                <button class="btn-text" onclick="scrollToSection('refund')"><i class="fa-regular fa-circle-play"></i> 100% refund offer</button>
-                
+                <button class="btn-primary" onclick="scrollToSection('courses')">
+                    <i class="fa-solid fa-rocket"></i> Explore Courses
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('refund')">
+                    <i class="fa-regular fa-circle-play"></i> How Refund Works
+                </button>
             </div>
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="icon-box purple"><i class="fa-solid fa-book"></i></div>
-                <div>
-                    <h3>50+</h3>
-                    <p>Courses</p>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="icon-box cyan"><i class="fa-solid fa-book"></i></div>
+                    <div>
+                        <h3>50+</h3>
+                        <p>Courses</p>
+                    </div>
                 </div>
-            </div>
-            <div class="stat-card">
-                <div class="icon-box blue"><i class="fa-solid fa-users"></i></div>
-                <div>
-                    <h3>100k+</h3>
-                    <p>Learners</p>
+                <div class="stat-card">
+                    <div class="icon-box blue"><i class="fa-solid fa-users"></i></div>
+                    <div>
+                        <h3>100k+</h3>
+                        <p>Learners</p>
+                    </div>
                 </div>
-            </div>
-            <div class="stat-card">
-                <div class="icon-box pink"><i class="fa-solid fa-circle-question"></i></div>
-                <div>
-                    <h3>100k+</h3>
-                    <p>Doubts Solved</p>
+                <div class="stat-card">
+                    <div class="icon-box pink"><i class="fa-solid fa-circle-question"></i></div>
+                    <div>
+                        <h3>100k+</h3>
+                        <p>Doubts Solved</p>
+                    </div>
                 </div>
-            </div>
-            <div class="stat-card">
-                <div class="icon-box orange"><i class="fa-solid fa-briefcase"></i></div>
-                <div>
-                    <h3>10k+</h3>
-                    <p>Student Projects</p>
+                <div class="stat-card">
+                    <div class="icon-box orange"><i class="fa-solid fa-briefcase"></i></div>
+                    <div>
+                        <h3>10k+</h3>
+                        <p>Student Projects</p>
+                    </div>
                 </div>
             </div>
         </div>
-        .
     </header>
+
+    <!-- ACTION BAR -->
+    <section class="action-bar">
+        <div class="action-bar-inner">
+            <a href="quiz.html" class="action-btn">
+                <i class="fa-solid fa-pencil"></i>
+                <span>Practice Quiz Now</span>
+            </a>
+            <a href="questions.html" class="action-btn">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Question Paper</span>
+            </a>
+            <a class="action-btn"
+                onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdyrmrb1KovaaSyZ3JU0wVNiJL7wiGj6OoRWUshf29xuIxZcw/viewform?usp=preview'">
+                <i class="fa-solid fa-upload"></i>
+                <span>Project Submit</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- COURSES -->
     <section class="courses-section" id="courses">
-        <a class="btn-primary" href="questions.html">Question paper</a>
-        <h2 class="section-title">Browse our Courses</h2>
-        <p class="section-subtitle">Explore a wide range of courses where learning is fun, easy, and absolutely free!</p>
-        
+        <h2 class="section-title">Browse our <span class="highlight-cyan">Courses</span></h2>
+        <p class="section-subtitle">Explore a wide range of courses where learning is fun, easy, and absolutely free!
+        </p>
+
         <div class="tabs">
             <button class="tab-btn active" data-filter="all">All Courses</button>
             <button class="tab-btn" data-filter="design">Design</button>
             <button class="tab-btn" data-filter="dev">Development</button>
-            <button class="tab-btn" data-filter="it">IT & Software</button>
+            <button class="tab-btn" data-filter="it">IT &amp; Software</button>
         </div>
 
         <div class="course-grid" id="courseGrid">
             <div class="course-card dev">
-                <div class="card-icon"><i class="fa-brands fa-react" style="color: #61dafb;"></i></div>
-                <h4>Web Development with MERN</h4>
+                <div class="card-icon"><i class="fa-brands fa-react" style="color:#61dafb;"></i></div>
+                <h4>Web Dev with MERN</h4>
             </div>
             <div class="course-card dev">
-                <div class="card-icon"><i class="fa-brands fa-python" style="color: #ffde57;"></i></div>
+                <div class="card-icon"><i class="fa-brands fa-python" style="color:#ffde57;"></i></div>
                 <h4>Python</h4>
             </div>
             <div class="course-card dev">
-                <div class="card-icon"><i class="fa-brands fa-java" style="color: #f89820;"></i></div>
+                <div class="card-icon"><i class="fa-brands fa-java" style="color:#f89820;"></i></div>
                 <h4>Java</h4>
             </div>
             <div class="course-card dev">
-                <div class="card-icon"><i class="fa-solid fa-code" style="color: #00599c;"></i></div>
+                <div class="card-icon"><i class="fa-solid fa-code" style="color:#00d4ff;"></i></div>
                 <h4>C++</h4>
             </div>
-            
             <div class="course-card it">
-                <div class="card-icon"><i class="fa-solid fa-database" style="color: #4db33d;"></i></div>
+                <div class="card-icon"><i class="fa-solid fa-database" style="color:#4db33d;"></i></div>
                 <h4>Data Science</h4>
             </div>
             <div class="course-card it">
-                <div class="card-icon"><i class="fa-solid fa-chart-simple" style="color: #f4a261;"></i></div>
+                <div class="card-icon"><i class="fa-solid fa-chart-simple" style="color:#f4a261;"></i></div>
                 <h4>Data Analytics</h4>
             </div>
             <div class="course-card it">
-                <div class="card-icon"><i class="fa-solid fa-brain" style="color: #e76f51;"></i></div>
+                <div class="card-icon"><i class="fa-solid fa-brain" style="color:#a78bfa;"></i></div>
                 <h4>Machine Learning</h4>
             </div>
-
             <div class="course-card design">
-                <div class="card-icon"><i class="fa-solid fa-pen-nib" style="color: #e91e63;"></i></div>
+                <div class="card-icon"><i class="fa-solid fa-pen-nib" style="color:#f472b6;"></i></div>
                 <h4>UI/UX Designing</h4>
             </div>
-             <div class="course-card design">
-                <div class="card-icon"><i class="fa-solid fa-bezier-curve" style="color: #9c27b0;"></i></div>
+            <div class="course-card design">
+                <div class="card-icon"><i class="fa-solid fa-bezier-curve" style="color:#c084fc;"></i></div>
                 <h4>Graphic Design</h4>
             </div>
         </div>
     </section>
 
+    <!-- HOW IT WORKS -->
     <section class="refund-section" id="refund">
-        <h2>How to Learn for <span class="highlight-purple-text">Free?</span></h2>
+        <h2 class="section-title">Learn for <span class="highlight-purple-text">Free?</span> Here's How.</h2>
+        <p class="section-subtitle" style="color:#7d95b0; margin-top:8px;">3 simple steps to get your 100% money back
+        </p>
         <div class="steps-container">
             <div class="step-card">
                 <div class="step-circle">1</div>
@@ -140,7 +177,7 @@
             <div class="step-card">
                 <div class="step-circle">2</div>
                 <div class="step-text">
-                    <p><strong>Complete Course</strong> & Submit Assignments</p>
+                    <p><strong>Complete Course</strong> &amp; Submit Assignments</p>
                 </div>
             </div>
             <div class="step-card">
@@ -155,53 +192,45 @@
     <footer>
         <div class="footer-content">
             <div class="footer-col">
-                <div class="logo">LearnFlow</div>
-                <p>An IIT Delhi Alumni Initiative. Join us to learn new skills and get 100% refund.</p>
+                <div class="logo"><i class="fa-solid fa-bolt"></i> Skill<span>Forge</span></div>
+                <p>An IIT Delhi Alumni Initiative. Learn cutting-edge skills and get 100% refund on completion.</p>
             </div>
             <div class="footer-col">
                 <h3>Quick Links</h3>
-                <a href="about.html" onclick="">About Us</a>
-                <a href="contact.html" onclick="">Contact Us</a>
-                <a href="#" onclick="">Privacy Policy</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#">Privacy Policy</a>
             </div>
             <div class="footer-col">
                 <h3>Contact Us</h3>
-                <p><i class="fa-solid fa-phone"></i> +91 +91 83769 44893</p>
+                <p><i class="fa-solid fa-phone"></i> +91 83769 44893</p>
                 <p><i class="fa-solid fa-location-dot"></i> Sector 65, Noida</p>
             </div>
         </div>
-        <div class="copyright">
-            © 2024 LearnFlow. All rights reserved.
-        </div>
+        <div class="copyright">© 2024 SkillForge. All rights reserved.</div>
     </footer>
 
-<div id="authModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle">Login</h2>
-
-        <div id="googleButtonDiv" style="display: flex; justify-content: center; margin-bottom: 20px;"></div>
-
-        <div style="display: flex; align-items: center; gap: 10px; margin: 15px 0;">
-            <div style="flex:1; height:1px; background:#ddd;"></div>
-            <span style="color:#777; font-size:0.9rem;">OR</span>
-            <div style="flex:1; height:1px; background:#ddd;"></div>
+    <!-- AUTH MODAL -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Login</h2>
+            <div id="googleButtonDiv" style="display:flex;justify-content:center;margin-bottom:20px;"></div>
+            <div style="display:flex;align-items:center;gap:10px;margin:15px 0;">
+                <div style="flex:1;height:1px;background:rgba(255,255,255,.1);"></div>
+                <span style="color:#7d95b0;font-size:0.85rem;">OR</span>
+                <div style="flex:1;height:1px;background:rgba(255,255,255,.1);"></div>
+            </div>
+            <form onsubmit="handleFormSubmit(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <input type="password" placeholder="Enter password" required>
+                <button type="submit" class="btn-primary full-width">Submit</button>
+            </form>
         </div>
-
-        <form onsubmit="handleFormSubmit(event)">
-            <input type="email" placeholder="Enter your email" required>
-            <input type="password" placeholder="Enter password" required>
-            <button type="submit" class="btn-primary full-width">Submit</button>
-        </form>
     </div>
-</div>
 
-    <section class="courses-section" id="courses">
-    <h2 class="section-title">Browse our Courses</h2>
-    <div class="course-grid" id="courseGrid"></div> 
-</section>
-
-<script src="js/courses_data.js"></script>
-<script src="js/script.js"></script>
+    <script src="js/courses_data.js"></script>
+    <script src="js/script.js"></script>
 </body>
-</html> 
+
+</html>

@@ -9,55 +9,70 @@ const coursesData = [
         category: 'dev',
         title: 'Python',
         icon: 'fa-brands fa-python',
-        color: '#ffde57'
+        color: '#ffde57',
+        pdfFile: 'PYTHON PROGRAMMING NOTES.pdf'
     },
     {
         category: 'dev',
         title: 'Java',
         icon: 'fa-brands fa-java',
-        color: '#f89820'
+        color: '#f89820',
+        pdfFile: 'NOTES ON OOPS THROUGH JAVA.pdf'
     },
     {
         category: 'dev',
         title: 'C++',
         icon: 'fa-solid fa-code',
-        color: '#00599c'
+        color: '#00599c',
+        pdfFile: 'NOTES ON OOPS USING C++.pdf'
     },
     {
         category: 'it',
         title: 'Data Science',
         icon: 'fa-solid fa-database',
-        color: '#4db33d'
+        color: '#4db33d',
+        pdfFile: 'DATA SCIENCE NOTES.pdf'
     },
     {
         category: 'it',
         title: 'Data Analytics',
         icon: 'fa-solid fa-chart-simple',
-        color: '#f4a261'
+        color: '#f4a261',
+        pdfFile: 'Digital Notes of Data Analytics.pdf'
     },
     {
         category: 'it',
         title: 'Machine Learning',
         icon: 'fa-solid fa-brain',
-        color: '#e76f51'
+        color: '#e76f51',
+        pdfFile: 'MACHINE LEARNING NOTES.pdf'
+    },
+    {
+        category: 'it',
+        title: 'Cyber Security',
+        icon: 'fa-solid fa-shield-halved',
+        color: '#06b6d4',
+        pdfFile: 'CYBER SECURITY NOTES.pdf'
     },
     {
         category: 'design',
         title: 'UI/UX Designing',
         icon: 'fa-solid fa-pen-nib',
-        color: '#e91e63'
+        color: '#e91e63',
+        pdfFile: 'NOTES ON UI UX  DESIGN.pdf'
     },
     {
         category: 'design',
         title: 'Graphic Design',
         icon: 'fa-solid fa-bezier-curve',
-        color: '#9c27b0'
+        color: '#9c27b0',
+        pdfFile: 'GRAPHIC DESGNING NOTES.pdf'
     }
 ];
 
 
 /* ==========================================
-   LEARNFLOW QUESTION BANK (100+ QUESTIONS)
+   Shadowscript QUESTION BANK (100+ QUESTIONS)
    ========================================== */
 const courses = [
     {
